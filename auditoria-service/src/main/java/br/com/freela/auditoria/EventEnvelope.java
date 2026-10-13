@@ -1,4 +1,14 @@
 package br.com.freela.auditoria;
 
-public class EventEnvelope {
+import java.time.Instant;
+import java.util.Map;
+import java.util.UUID;
+
+public record EventEnvelope (UUID eventId,
+                            String eventType,
+                            int version,
+                            UUID contratoId,
+                            Instant occurredAt,
+                            String correlationId,
+                            Map<String, Object> payload){
 }

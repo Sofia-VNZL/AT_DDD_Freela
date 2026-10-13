@@ -19,7 +19,7 @@
             level=%level
         </labels>
         <message>
-            <pattern>%-5level service=${appName} thread=%thread logger=%logger{36} - %msg%n</pattern>
+            <pattern>%-5level service=${appName} traceId=%X{traceId:-} thread=%thread logger=%logger{36} - %msg%n</pattern>
         </message>
     </appender>
 
